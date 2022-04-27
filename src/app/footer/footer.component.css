@@ -1,0 +1,38 @@
+.up{
+    color:snow;
+    }
+    .contact{
+      padding-top: 15px;
+    }
+    .contact_p{
+      font-size: 13px;
+      margin-left: 5px;
+    }
+    .btn_pers{
+        background-color: #031532;
+        color: snow;
+          }
+  a{
+    font-size: 12px;
+  }
+  .edit{
+    padding-left: 30px;
+  }
+  .edit-formation{
+    padding-left: 15px;
+  }
+  .row_color{
+    background-color:#031532;
+    padding: auto;
+  }
+  .row_edit{
+padding-left: 60px;
+padding-top: 40px;
+  }
+  .con{
+    padding-right: 50px;
+    color:black;
+  }
+ p, div, h2, a{
+    color: rgba(255, 250, 250, 0.829);
+  }

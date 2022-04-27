@@ -1,0 +1,44 @@
+<app-header></app-header>
+
+<div class="row rowedit">
+    <h2>Emplois et Stages </h2>
+    <hr style="color: rgb(168, 168, 168);">
+    <br><br><br>
+    <div class="col-sm-4" *ngFor="let item of listData">
+      <div class="card" style="width: 20rem;">
+        <div class="card-body">
+          <img class="card-img-top img-responsive" src = "{{this.crudApi.host+'/api/Imgemplois/'+item.id}}" style = "height :200px;width:fil-content; padding-bottom: 20px;" alt="">
+         
+          <h5 class="card-title" style="height: 30px; text-align: center;">{{item.titre}}</h5>
+            <p class="card-text text-concat">{{item.descrip}}</p>
+             <!-- Afficher Emploi-->
+          <div class="link1_right">
+            <!-- Button trigger modal -->
+            <a class="nav-link btn_pers" data-bs-toggle="modal" data-bs-target="#AffEmploiModal" (click) = "selectData(item)">Plus d'information</a>
+           
+              <div class="modal fade" id="AffEmploiModal" tabindex="-1" aria-labelledby="AffEmploiModal" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="AffEmploiModal">{{item.titre}}</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="card-img-top img-responsive" src = "{{this.crudApi.host+'/api/Imgemplois/'+item.id}}" style = "height :200px;width:fil-content; padding-bottom: 20px;" alt="">
+         
+                      <h5 class="card-title" style="height: 30px; text-align: center;">{{item.titre}}</h5>
+                        <p class="card-text">{{item.descrip}}</p>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>   
+      
+  </div>
+
+<app-footer></app-footer>
+

@@ -1,0 +1,135 @@
+<app-header-ens></app-header-ens>
+
+<div class="row rowedit">
+    <h2>Bourses </h2>
+    <hr style="color: rgb(168, 168, 168);">
+    <br>
+<!--Ajouter Bourse-->
+<div class="link1_right">
+  <!-- Button trigger modal -->
+    <a class="nav-link link1 btnAdd" style="margin-bottom: 20px; font-size: 13px;" data-bs-toggle="modal" data-bs-target="#BourseModal">Ajouter</a>
+    <!-- Modal -->
+    <div class="modal fade" id="BourseModal" tabindex="-1" aria-labelledby="BourseModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="BourseModalLabel">Ajouter/Modifier</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form [formGroup]="this.crudApi.dataForm" (ngSubmit)="onSubmit()" name="AddBourseForm">
+                <input type="hidden"  formControlName="id" id="id">
+                    <div class="row">
+                      <div class="form-group">
+                        <label for="bourse_titre">Titre</label>
+                        <input style="font-size: small;" type="text" class="form-control"  formControlName="titre" id="titre" placeholder="Titre"> 
+                      </div>
+                      <label class="custom-file-label" for="bourse_img">Choisir une image </label>
+                      <div class="custom-file">
+                          <input style="font-size: 13px;" type="file" accept="image/*" (change)="onSelectFile($event)" class="custom-file-input">
+                        <img [src]="imageURL" height="200" *ngIf="imageURL">
+                        </div>
+                      <div class="form-group">
+                        <label for="bourse_descrip">Description</label>
+                        <textarea class="form-control" formControlName="descrip" style="font-size: small;" id="descrip" rows="3"></textarea>
+                      </div>
+                    </div>    
+                    <div class="modal-footer">
+                      <button class="btn btnBye"  data-bs-dismiss="modal">Fermer</button>
+                      <button type="submit" style="float: right;" class="btn btnVal">Valider</button>
+                    </div>              
+                </form>
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>
+</div>
+<!---->
+
+<!-- Liste -->
+    <br><br>
+    <div class="col-sm-4" *ngFor="let item of listData">
+      <div class="card" style="width: 20rem; margin-bottom: 30px;">
+        <div class="card-body" style="max-height: 450px; min-height: 450px;">
+            <img class="card-img-top img-responsive" src = "{{this.crudApi.host+'/api/Imgarticles/'+item.id}}" style = "height :200px;width:fil-content" alt="">
+          <h5 class="card-title" style="height: 70px; text-align: center;">{{item.titre}}</h5>
+          <p class="card-text text-concat">{{item.pub}}</p>
+        <div>
+          <!-- Afficher Emploi-->
+           <div class="link1_right">
+            <!-- Button trigger modal -->
+            <a class="nav-link link1 btnAff" data-bs-toggle="modal" data-bs-target="#AffEmploiModal" (click) = "selectData(item)">Afficher</a>
+           
+              <div class="modal fade" id="AffEmploiModal" tabindex="-1" aria-labelledby="AffEmploiModal" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="AffEmploiModal">{{item.titre}}</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="card-img-top img-responsive" src = "{{this.crudApi.host+'/api/Imgarticles/'+item.id}}" style = "height :200px;width:fil-content; padding-bottom: 20px;" alt="">
+         
+                      <h5 class="card-title" style="height: 30px; text-align: center;">{{item.titre}}</h5>
+                        <p class="card-text">{{item.pub}}</p>
+                  </div>
+                </div>
+              </div>          
+          </div>
+           </div>
+          <!---->
+          <button type="button" class="btn btnSup" (click) = "removeData(item.id)">Supprimer</button>
+          <!-- Modifier Bourse-->
+          <div class="link1_right">
+            <!-- Button trigger modal -->
+           <a class="nav-link link1 btnModif2" data-bs-toggle="modal" data-bs-target="#BourseModal" (click) = "selectData(item)">Modifier</a>           
+           <!-- Old update Model            
+            <div class="modal fade" id="ModifBourseModal" tabindex="-1" aria-labelledby="ModifBourseModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="ModifBourseModalLabel">Modifier Bourse</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" >
+                        <form [formGroup]="this.crudApi.dataForm" (ngSubmit)="onSubmit()" name="ModifBourseForm">
+                          
+                              <div class="row">
+                                <div class="form-group">
+                                  <label for="bourse_titre">Titre</label>
+                                  <input style="font-size: small;" type="text" class="form-control" formControlName="titre" [(ngModel)]="datForm.titre" id="titre" placeholder="Titre" required> 
+                                </div>
+                                <label class="custom-file-label" for="filename">Choisir une image </label>
+                                <div class="custom-file">
+                                  <input style="font-size: 13px;" type="file" accept="image/*" (change)="onSelectFile($event)" class="custom-file-input" formControlName="filename" id="filename">
+                                  <img [src]="imageURL" height="200" *ngIf="imageURL">         
+                                </div>
+                                <div class="form-group">
+                                  <label for="bourse_descrip">Description</label>
+                                  <textarea class="form-control" formControlName="descrip" [(ngModel)]="datForm.descrip" style="font-size: small;" id="descrip" rows="3"></textarea>
+                                </div>
+                              </div>  
+                              <div class="modal-footer">
+                                <button class="btn btnBye"  data-bs-dismiss="modal">Fermer</button>
+                                <button style="float: right;" class="btn btnModif" type="submit">Modifier</button>
+                              </div>                
+                          </form>
+                    </div>
+                    <br>
+                   
+                  </div>
+                </div>
+              </div>
+          </div>
+          
+          
+-->
+        </div>
+      </div>
+      </div>
+    </div>
+      
+  </div>
+
+<app-footer></app-footer>

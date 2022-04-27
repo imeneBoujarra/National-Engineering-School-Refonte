@@ -1,0 +1,24 @@
+<app-admin-header></app-admin-header>
+
+<div class="col-md-9 register-right"   [hidden]="submitted">
+<form class="row g-3 needs-validation" >
+    <div class="form-group" >
+      <label for="NomPrenom">Titre</label>
+      <input style="font-size: small;" type="text" value="{{actualite.title}}" [(ngModel)]="actualite.title" disabled=""> 
+    </div>
+   
+    <div class="form-group">
+      <label for="about">Description</label>
+      <textarea class="form-control" style="font-size: small;" value="{{actualite.description}}" disabled></textarea>
+    </div>
+  
+    <div class="form-group">
+        <label for="about">lien utiles</label>
+        <textarea class="form-control" style="font-size: small;" value="{{actualite.url}}" [(ngModel)]="actualite.url" disabled="" ></textarea>
+      </div>
+  
+     
+      <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    <button type="submit" class="btn btn_pers" (click)="goToList()">Retour</button></div>
+  </form> <div [hidden]="!submitted">

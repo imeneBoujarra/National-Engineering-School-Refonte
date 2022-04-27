@@ -1,0 +1,29 @@
+
+<app-admin-header></app-admin-header>
+
+<div class="col-md-9 register-right"   [hidden]="submitted">
+   <h1 class="titre" ><i>Ajouter une actualite </i></h1> 
+<form class="row g-3 needs-validation"  (ngSubmit)="onSubmit()" style="border: 1cm; margin-left: 15px;">
+    <div class="form-group" >
+      <label for="NomPrenom">Titre</label>
+      <input style="font-size: small;" type="text" [(ngModel)]="actualite.title"  [ngModelOptions]="{standalone: true}" class="form-control" id="Nom" placeholder="titre" required> 
+    </div>
+   
+    <div class="form-group">
+      <label for="about">Description</label>
+      <textarea class="form-control" style="font-size: small;"  [(ngModel)]="actualite.description"  [ngModelOptions]="{standalone: true}" id="about" rows="3"></textarea>
+    </div>
+  
+    <div class="form-group">
+        <label for="about">lien utiles</label>
+        <input style="font-size: small;" type="text" [(ngModel)]="actualite.url"  [ngModelOptions]="{standalone: true}" class="form-control" id="Nom" placeholder="lien" required> 
+    </div>
+  
+     
+      <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    <button type="submit" class="btn btn_pers">Ajouter</button></div>
+  </form>
+   <div [hidden]="!submitted">
+    <h4>Actualite ajouté avec succes</h4>
+    </div></div>

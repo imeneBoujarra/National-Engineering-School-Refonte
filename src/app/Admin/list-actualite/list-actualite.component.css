@@ -1,0 +1,29 @@
+   
+   .img-responsive {
+    height: auto;
+    width: auto;
+    max-height: 30%;
+    max-width: 100%;
+}
+.input-group{
+    position: absolute;
+    right: 0px;
+    width: 300px;
+   padding: 10px;
+margin-left:30px ;}
+  
+    a.edit {
+    color: #FFC107;
+    margin-left:80%;
+}
+   a.delete {
+    color: #E34724;
+}
+.btn-outline-info
+{  
+    position:absolute;
+    margin-top: 12px;
+    margin-left: 70%;
+    
+ 
+}

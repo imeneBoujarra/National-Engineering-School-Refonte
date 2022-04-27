@@ -1,0 +1,138 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid nav1">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active link1" aria-current="page" href="#">Accueil</a>
+            <a class="nav-link link1" href="#">Actualités</a>
+            <a class="nav-link link1" href="#">Avis</a>
+            <a class="nav-link link1" href="#">Calandrier</a>
+            <a class="nav-link link1" href="#">Contact</a>
+          </div>
+          <a class="nav-link link1 login" routerLink="/login">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
+              <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+            </svg> Se_connecter</a>
+          
+<!--
+        <div class="link1_right">
+            Button trigger modal 
+              <a class="nav-link link1 login" data-bs-toggle="modal" data-bs-target="#exampleModal">Se connecter</a>
+              Modal 
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" >
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Se connecter</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form name="myForm">
+                            <div class="login-container">
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="email" name="email" placeholder="Email"  required  required class="form-control">
+                                  </div>
+                                  <br>
+                                </div>
+                                <div class="col-md-12">
+                                  <div class="form-group">
+                                    <label>Mot de passe</label>
+                                    <input type="password" name="pwd" placeholder="Mot de passe"  required class="form-control">
+                                  </div>
+                                </div>
+                                
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                              <button type="button" class="btn btn_pers"  >Se connecter</button>
+                            </div>
+                          </form>
+                    </div>
+                    <br>
+                    
+                  </div>
+                </div>
+              </div>
+          </div>
+        -->
+        </div>
+      </div>
+    </nav>  
+    <!-- Between nav-->
+    <div class="container d-flex flex-wrap justify-content-center">
+      <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
+        <a class="navbar-brand" href="#">
+          <img src="../assets/Logo_ENICarthage.jpg" alt="Logo_ENICarthage" class="d-inline-block align-text-top logo">
+        </a>
+      </a>
+      <form class="col-md-6 offset-md-3 Search">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Rechercher une information ,actualité, évenement...">
+          <div class="input-group-append">
+            <button class="btn btn_pers" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+              </svg>            
+            </button>
+          </div>
+        </div>    </form>
+    </div>
+    <!--- end Between nav-->
+ 
+  <!-- real nav-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-nav rounded" aria-label="Twelfth navbar example">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">  Présentation  </a>
+             <ul class="dropdown-menu">
+             <li><a class="dropdown-item" href="#"> Organigramme</a></li>
+             <li><a class="dropdown-item" href="#"> Partenaires</a></li>
+             </ul>
+         </li>
+         <li class="nav-item dropdown">
+          <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">  Formations  </a>
+           <ul class="dropdown-menu">
+           <li><a class="dropdown-item" href="#">Cycles ingénieurs</a></li>
+           <li><a class="dropdown-item" href="#"> Mastéres</a></li>
+           <li><a class="dropdown-item" href="#"> Doctorat </a></li>
+           </ul>
+       </li>
+       <li class="nav-item dropdown">
+        <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">  Etudiants  </a>
+         <ul class="dropdown-menu">
+         <li><a class="dropdown-item" href="#"> Emplois de temps</a></li>
+         <li><a class="dropdown-item" href="#"> Clubs</a></li>
+         <li><a class="dropdown-item" href="#"> Guide de l'étudiant</a></li>
+         </ul>
+     </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/Enseignant">Enseignants</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">  Opportunités  </a>
+             <ul class="dropdown-menu">
+             <li><a class="dropdown-item" routerLink="/EmploiStages"> Emploi et stages</a></li>
+             <li><a class="dropdown-item" routerLink="/Bourse"> Bourses </a></li>
+             <li><a class="dropdown-item" routerLink="/4C"> Centre 4C </a></li>
+             </ul>
+         </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- end real nav-->
+</header>

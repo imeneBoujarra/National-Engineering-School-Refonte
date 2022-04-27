@@ -1,0 +1,49 @@
+
+<app-admin-header></app-admin-header>
+
+<div class="col-md-9 register-right"   [hidden]="submitted">
+    <h1 class="titre" ><i>Ajouter un enseignant </i></h1> 
+
+    <form class="row g-3 needs-validation"  (ngSubmit)="updateEnseignant()" style="border: 1cm; margin-left: 15px;">
+        <div class="form-group" >
+          <label for="NomPrenom">Nom</label>
+          <input style="font-size: small;" value="{{enseignant.nom}}" type="text" [(ngModel)]="enseignant.nom"  [ngModelOptions]="{standalone: true}" class="form-control" id="Nom" placeholder="Nom" required> 
+        </div>
+        <div class="form-group">
+          <label for="NomPrenom">Prenom</label>
+          <input style="font-size: small;" type="text"    value="{{enseignant.prenom}}" [(ngModel)]="enseignant.prenom"  [ngModelOptions]="{standalone: true}" class="form-control" id="Prenom" placeholder="Prenom" required> 
+        </div>
+      
+        <div class="form-group">
+            <label for="specialite">Mot de passe</label>
+            <input style="font-size: small;" type="text" value="{{enseignant.password}}" [(ngModel)]="enseignant.password"   [ngModelOptions]="{standalone: true}" class="form-control" id="NomPrenom" placeholder="Specialite" required> 
+       
+          </div>
+        <div class="form-group">
+          <label for="specialite">Spécialité</label>
+          <input style="font-size: small;" type="text" value="{{enseignant.specialite}}" [(ngModel)]="enseignant.specialite"   [ngModelOptions]="{standalone: true}" class="form-control" id="NomPrenom" placeholder="Specialite" required> 
+     
+        </div>
+        <div class="form-group">
+          <label for="about">Résumé</label>
+          <textarea class="form-control" style="font-size: small;"   value="{{enseignant.resume}}" [(ngModel)]="enseignant.resume"  [ngModelOptions]="{standalone: true}" id="about" rows="3"></textarea>
+        </div>
+    
+          <div class="form-group">
+            <label for="contact">Informations de contact</label>
+            <input style="font-size: small;" type="text" value="{{enseignant.tel}}" [(ngModel)]="enseignant.tel"  [ngModelOptions]="{standalone: true}" class="form-control" id="tel" placeholder="tel" required> 
+           <br>
+            <input style="font-size: small;" type="email" value="{{enseignant.email}}" [(ngModel)]="enseignant.email"   [ngModelOptions]="{standalone: true}" class="form-control" id="email" placeholder="email" required> 
+          </div>
+          <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn_pers">Ajouter</button></div>
+      </form> <div [hidden]="!submitted">
+        <h4>enseignant ajouté avec succes</h4>
+        </div></div>
+     
+     
+      
+    
+    
+    

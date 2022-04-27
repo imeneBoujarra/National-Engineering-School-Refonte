@@ -1,0 +1,30 @@
+
+<app-admin-header></app-admin-header>
+
+<div>
+  <div class="input-group rounded">
+    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+    <img src="..\assets\icons8-chercher-30.png" class="img-responsive"/>
+   </div> <button type="button" class="btn btn-outline-info btn-sm" (click)="goToAdd()" >Ajouter des actualites</button>
+    
+    
+  </div>
+<br>
+<br>
+<br>
+
+    <div class="container marketing">
+        <h1> Actualités</h1>
+        <br>
+          <div class="row act">
+            <div class="col-lg-4"  *ngFor="let actualite of actualites |async" (click)="goToDetail(actualite.id)" >
+                
+              <img class="bd-placeholder-img " width="260" height="200" style="padding-bottom: 50px;" src="../../assets/act1.jpg">
+              <p><a class="Actualite act" href="#">{{actualite.title}}</a></p>
+              <p class="actp">{{actualite.description}}</p>
+              <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons" (click)=" updateActualite(actualite.id)">&#xE254;</i></a>
+              <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons" (click)="deleteActualite(actualite.id)">&#xE872;</i></a><div class="card-footer">
+        <small class="text-muted">Date de publication : {{actualite.dateAjout}}</small>
+      </div>
+            </div><!-- /.col-lg-4 -->
+    </div>

@@ -1,0 +1,73 @@
+
+
+
+<app-admin-header></app-admin-header>
+<br>
+
+<br>
+<h1><i class="liste-title" > Liste des enseignants</i></h1>
+<br>
+<body>
+<div >
+  <div class="input-group rounded">
+    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+    <img src="..\assets\icons8-chercher-30.png" class="img-responsive"/>
+   
+  </div> <button type="button" class="btn btn-outline-info btn-sm" (click)="goToAdd()" >Ajouter Enseignant</button>
+<br>
+<br>
+<br>
+
+<div>
+<table class="table table-responsive-sm table-hover table-outline mb-0 ">
+    <thead class="thead-light">
+      <tr>
+        <th class="text-center"> # id</th>
+        <th class="text-center">Enseignant</th>
+        <th class="text-center">Nom</th>
+        <th class="text-center">Prenom</th>
+        <th class="text-center">Telephone</th>
+        <th class="text-center">Email</th>
+        <th class="text-center">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let enseignant of enseignants |async">
+        <td class="text-center">{{enseignant.id}}</td>
+        <td class="text-center">
+          <div class="avatar"class="text-center">
+            <img src="https://img.freepik.com/vecteurs-libre/homme-affaires-caractere-avatar-isole_24877-60111.jpg?w=2000" width="35px" height="35px" class="img-avatar" alt="admin@bootstrapmaster.com">
+            <span class="avatar-status badge-success"></span>
+            
+          </div>
+        </td>
+        <td>
+          <div class="text-center">{{enseignant.nom}}</div>
+         
+         
+        </td>
+        <td> <div class="text-center">{{enseignant.prenom}}</div></td>
+       
+        <td>
+          <div class="text-center">{{enseignant.tel}}</div>
+        </td>
+        <td>
+          <div class="text-center">{{enseignant.email}}</div>
+        </td>
+      
+
+        
+          <td class="text-center">
+            <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+            <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons" (click)=" updateEnseignant(enseignant.id)">&#xE254;</i></a>
+            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons" (click)="deleteEnseignant(enseignant.id)">&#xE872;</i></a>
+         </td>
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
+
+
+</div>
+</body>

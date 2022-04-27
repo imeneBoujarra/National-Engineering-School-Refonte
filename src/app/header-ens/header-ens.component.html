@@ -1,0 +1,97 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid nav1">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="col-8 navbar-nav">
+            <a class="nav-link active link1" aria-current="page" href="#">Accueil</a>
+            <a class="nav-link link1" href="#">Actualités</a>
+            <a class="nav-link link1" href="#">Avis</a>
+            <a class="nav-link link1" href="#">Calandrier</a>
+            <a class="nav-link link1" href="#">Contact</a>
+          </div>
+        <div class="col-4 link1_right col-auto">
+          
+            <!-- Button deconnecter-->
+              <button class="nav-link link1 login" (click)="logOut()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+                  <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                </svg> Se_déconnecter</button>  
+                      
+          </div>
+        </div>
+      </div>
+    </nav>  
+    <!-- Between nav-->
+    <div class="container d-flex flex-wrap justify-content-center">
+      <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
+        <a class="navbar-brand" href="#">
+          <img src="../assets/Logo_ENICarthage.jpg" alt="Logo_ENICarthage" class="d-inline-block align-text-top logo">
+        </a>
+      </a>
+      <form class="col-md-6 offset-md-3 Search">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Rechercher une information ,actualité, évenement...">
+          <div class="input-group-append">
+            <button class="btn btn_pers" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+              </svg>            
+            </button>
+          </div>
+        </div>    </form>
+    </div>
+    <!--- end Between nav-->
+ 
+  <!-- real nav--> 
+  <nav class="navbar navbar-expand-lg navbar-dark bg-nav rounded" aria-label="Twelfth navbar example">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">  Présentation  </a>
+             <ul class="dropdown-menu">
+             <li><a class="dropdown-item" href="#"> Organigramme</a></li>
+             <li><a class="dropdown-item" href="#"> Partenaires</a></li>
+             </ul>
+         </li>
+         <li class="nav-item dropdown">
+          <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">  Formations  </a>
+           <ul class="dropdown-menu">
+           <li><a class="dropdown-item" href="#">Cycles ingénieurs</a></li>
+           <li><a class="dropdown-item" href="#"> Mastéres</a></li>
+           <li><a class="dropdown-item" href="#"> Doctorat </a></li>
+           </ul>
+       </li>
+       <li class="nav-item dropdown">
+        <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">  Etudiants  </a>
+         <ul class="dropdown-menu">
+          <li><a class="dropdown-item" routerLink="/EmploiStages"> Emploi et stages</a></li>
+          <li><a class="dropdown-item" routerLink="/Bourse"> Bourses </a></li>
+          <li><a class="dropdown-item" routerLink="/4C"> Centre 4C </a></li>
+         </ul>
+     </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/Enseignant">Enseignants</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">  Opportunités  </a>
+             <ul class="dropdown-menu">
+             <li><a class="dropdown-item" href="#"> Emploi et stages</a></li>
+             <li><a class="dropdown-item" href="#"> Bourses </a></li>
+             <li><a class="dropdown-item" href="#"> Centre 4C </a></li>
+             </ul>
+         </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- end real nav-->
+</header>

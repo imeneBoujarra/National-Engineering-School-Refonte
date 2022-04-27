@@ -1,0 +1,40 @@
+.pad{
+    padding-left: 100px;
+    padding-top: 50px;
+
+}
+.img{
+    padding-top: 6px;
+    padding-left: 8px;
+}
+.card_border{
+    border-style:solid;
+    border-width: 1px;
+    border-color: rgb(218, 218, 218);
+    font-size: smaller;
+}
+
+.rowedit{
+    padding-left: 80px;
+    padding-right: 90px;
+    padding-bottom: 50px;
+}
+.editcardfilter{
+    padding-left: 80px;
+    
+}
+.filter{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #f3f3f3;
+    background-image: url("../../assets/glas.jpg");
+}
+.btn_pers{
+    background-color: #031532;
+    color: snow;
+    float: right;
+      }
+.btn_srch{
+    color: snow;
+    float: right;
+}
